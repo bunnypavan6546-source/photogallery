@@ -1,0 +1,174 @@
+:root {
+  --background: #f7f7f2;
+  --text: #20241f;
+  --muted: #626a60;
+  --accent: #426b50;
+  --card: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 22px 24px;
+}
+
+.logo {
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 22px;
+}
+
+nav a,
+.project-card a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+nav a:hover,
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+.hero,
+.section,
+footer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 64px 24px;
+}
+
+.hero {
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+h1 {
+  font-size: clamp(3rem, 9vw, 5.5rem);
+  line-height: 1.05;
+  margin: 0 0 18px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.intro {
+  max-width: 560px;
+  color: var(--muted);
+  font-size: 1.2rem;
+  margin-bottom: 28px;
+}
+
+.button {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 11px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.button:hover {
+  background: #31513c;
+}
+
+.section > p {
+  max-width: 680px;
+  color: var(--muted);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.project-card {
+  background: var(--card);
+  border: 1px solid #e6e8e1;
+  border-radius: 10px;
+  padding: 22px;
+}
+
+.project-card h3 {
+  margin-top: 0;
+}
+
+.project-card p {
+  color: var(--muted);
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact p {
+  margin: 0 auto 22px;
+}
+
+footer {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  color: var(--muted);
+  text-align: center;
+  border-top: 1px solid #e1e4dc;
+}
+
+@media (max-width: 700px) {
+  .site-header {
+    align-items: flex-start;
+    gap: 16px;
+    flex-direction: column;
+  }
+
+  nav {
+    gap: 16px;
+  }
+
+  .hero,
+  .section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .hero {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}
